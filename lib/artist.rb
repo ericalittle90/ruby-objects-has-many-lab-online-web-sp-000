@@ -10,5 +10,8 @@ class Artist
     song.artist = self
   end
 
+  def songs
+    Song.all.select {|a| a.artist == self}
+  end
 
 end
